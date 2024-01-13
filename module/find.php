@@ -1,5 +1,9 @@
-<form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
-	<p>Find Article <input type="text" name="search" id="searchArticle"> <input type="submit" value="Поиск"></p>
+<form action="<?= $_SERVER['PHP_SELF'] ?>" method="get" id='find'>
+	<div>
+		<p>Find Article</p>
+		<input type="text" name="search" id="searchArticle">
+		<input type="submit" value="Find" id="findBtn">
+	</div>
 </form>
 
 <?php
@@ -18,18 +22,25 @@ if (isset($_GET['search'])) {
 
 	countArticles($result);
 }
-
-function countArticles($result)
-{
-	if ($result->num_rows > 0) {
-		while ($row = $result->fetch_assoc()) {
-			echo "Title: " . $row['title'] . "<br>Link: " ?> <a href='<?= $row['link']; ?>'>link</a>
-			<?php "<br>";
-		}
-	} else {
-		echo "not found";
-	}
-}
 ?>
-
+<div class="founded">
+	<?php
+	function countArticles($result)
+	{
+		if ($result->num_rows > 0) {
+			while ($row = $result->fetch_assoc()) {
+				?>
+				<p><a href='<?= $row['link']; ?>'>
+						<?= $row['title']; ?>
+					</a></p>
+				<?php "<br>";
+			}
+		} else {
+			?>
+			<p>Not found</p>
+			<?php
+		}
+	}
+	?>
+</div>
 <hr>

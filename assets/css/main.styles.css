@@ -1,0 +1,83 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 1270px;
+	margin: 0 auto;
+}
+
+#homePage {
+	width: 100%;
+	display: flex;
+}
+
+#homePage > h1 {
+	margin: 0 auto;
+}
+
+#homePage .info {
+	padding-top: 10vh;
+}
+
+#homePage .info > h1 {
+	text-align: center;
+	font-size: 60px;
+	margin-bottom: 10vh;
+}
+
+#homePage .info > p {
+	margin: 20px 0;
+	text-align: center;
+	font-size: 36px;
+}
+
+#find {
+	display: flex;
+	margin: 20px 0;
+}
+
+#find > div {
+	margin: 0 auto;
+	display: flex;
+}
+
+#find > div > p {
+	font-size: 36px;
+	margin: auto 0;
+}
+
+#find > div > input {
+	height: 40px;
+	margin: 0 10px;
+}
+
+#findBtn {
+	height: 40px;
+	width: 40px;
+	border-radius: 10px;
+}
+
+#searchArticle {
+	width: 400px;
+	border-radius: 10px;
+}
+
+.founded {
+	text-align: center;
+}
+
+.lastArticle {
+	text-align: center;
+}
+
+.lastArticle > h2 {
+	margin: 20px 0;
+	font-size: 48px;
+}
+
+.lastArticle > p {
+	margin: 10px 0;
+	font-size: 24px;
+}
