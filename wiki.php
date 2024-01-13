@@ -5,7 +5,7 @@
 </head>
 
 <body>
-
+	<p><a href="/">Home</a></p>
 	<?php
 	$sql = "SELECT * FROM `articles`";
 	$result = mysqli_query($conn, $sql);
@@ -14,7 +14,11 @@
 
 	while ($row = $result->fetch_assoc()) {
 		if ($row['link'] == $current_url) {
-			echo $current_url;
+			echo $row["id"] . '</br>';
+			echo $row["title"] . '</br>';
+			echo $row["description"] . '</br>';
+			echo $row['link'] . '</br>';
+
 			$found = true;
 			break;
 		}

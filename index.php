@@ -5,6 +5,8 @@
 </head>
 
 <body>
+	<p>add new articles <a href="/pages/addArticles.php">link</a></p>
+
 	<?php
 	$sql = "SELECT * FROM `articles`";
 	$result = mysqli_query($conn, $sql);
