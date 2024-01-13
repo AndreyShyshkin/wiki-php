@@ -1,12 +1,12 @@
 <!doctype html>
 
 <head>
-	<?php require $_SERVER["DOCUMENT_ROOT"] . "/partials/head.php"; ?>
+	<?php require $_SERVER["DOCUMENT_ROOT"] . "/module/head.php"; ?>
 </head>
 
 <body>
 
-	<?php require $_SERVER["DOCUMENT_ROOT"] . "/partials/scripts.php"; ?>
+	<?php require $_SERVER["DOCUMENT_ROOT"] . "/module/scripts.php"; ?>
 </body>
 
 </html>
