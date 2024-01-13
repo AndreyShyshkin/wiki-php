@@ -7,6 +7,8 @@
 <body>
 	<p>add new articles <a href="/pages/addArticles.php">link</a></p>
 
+	<?php require $_SERVER["DOCUMENT_ROOT"] . "/module/find.php"; ?>
+
 	<?php
 	$sql = "SELECT * FROM `articles`";
 	$result = mysqli_query($conn, $sql);
