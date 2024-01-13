@@ -30,7 +30,7 @@
 			</button>
 		</div>
 	</form>
-	<?php require $_SERVER["DOCUMENT_ROOT"] . "/pages/submit.php"; ?>
+	<?php require $_SERVER["DOCUMENT_ROOT"] . "/module/submit.php"; ?>
 
 
 	<?php require $_SERVER["DOCUMENT_ROOT"] . "/module/scripts.php"; ?>

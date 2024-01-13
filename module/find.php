@@ -8,7 +8,6 @@ require $_SERVER["DOCUMENT_ROOT"] . "/config/BD_connect.php";
 if (isset($_GET['search'])) {
 	$inputSearch = $_GET['search'];
 
-	// Use prepared statements to prevent SQL injection
 	$sql = "SELECT * FROM `articles` WHERE `title` = ? OR `description` = ? OR `link` = ?";
 
 	$stmt = mysqli_prepare($conn, $sql);
