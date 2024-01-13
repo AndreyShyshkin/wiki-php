@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database = "wikidb";
+$database = "wikibd";
 $username = "root";
 $password = "";
 
