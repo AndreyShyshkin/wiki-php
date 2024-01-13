@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 13 2024 г., 17:39
+-- Время создания: Янв 13 2024 г., 20:10
 -- Версия сервера: 10.4.26-MariaDB
 -- Версия PHP: 7.4.30
 
@@ -39,7 +39,8 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`id`, `title`, `description`, `link`) VALUES
-(1, 'wml', 'wml', '/wml');
+(1, 'wml', 'wml', '/wml'),
+(10, 'test', 'test', '/test');
 
 --
 -- Индексы сохранённых таблиц
@@ -59,7 +60,7 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT для таблицы `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
