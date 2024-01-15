@@ -11,27 +11,25 @@
 		<?php
 		$sql = "SELECT * FROM `articles`";
 		$result = mysqli_query($conn, $sql);
-		$current_url = "$_SERVER[REQUEST_URI]";
+		$current_id = $_GET["id"];
+
+		require $_SERVER["DOCUMENT_ROOT"] . "/module/editArticles.php";
 
 		while ($row = $result->fetch_assoc()) {
-			if ($row['link'] == $current_url) { ?>
-				<a href="/pages/editArticlesPage.php?id=<?= $row['id'] ?>">Edit</a>
-				<div>
-					<h1 class="show">
-						<?= $row["title"] ?>
-					</h1>
+			if ($row['id'] == $current_id) { ?>
+				<a href="<?= $row['link'] ?>">Go back</a>
+				<form action="#" method="POST">
+					<input name="Title" type="text" placeholder="Title" value="<?= $row["title"] ?>">
 					<p>
 						<span>Description:</span><br>
-					<p class="show">
-						<?= $row["description"] ?>
-					</p>
 
+						<input name="Description" type="text" placeholder="Description" value="<?= $row["description"] ?>">
 					</p>
-					<p>To share this article: <a class='show' href="<?= $row["link"] ?>">wiki-php
-							<?= $row["link"] ?>
-						</a>
+					<p>To share this article:
+						<input name="Link" type="text" placeholder="Link" value="<?= $row["link"] ?>">
 					</p>
-				</div>
+					<button type="submit" name="submit">EDIT</button>
+				</form>
 
 				<?php
 				$found = true;

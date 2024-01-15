@@ -1,5 +1,4 @@
 <?php
-require $_SERVER["DOCUMENT_ROOT"] . "/config/BD_connect.php";
 if (!empty($_POST)) {
 
 	$articleTitle = $_POST['articleTitle'];
@@ -16,18 +15,12 @@ if (!empty($_POST)) {
 		return $randstring;
 	}
 
-	$result = mysqli_query($conn, $sql);
-
 	$sql = "INSERT INTO `articles` (`id`, `title`, `description`, `link`) VALUES (NULL, '" . $articleTitle . "', '" . $articleDescription . "', '/" . $articleLink . "');";
 
 	if (mysqli_query($conn, $sql)) {
-		?>
-		<script>alert("New record created successfully")</script>
-		<?php
+		echo '<script>alert("New record created successfully")</script>';
+		echo '<script>window.location.href = "/' . $articleLink . '";</script>';
 	} else {
-		?>
-		<script>alert("ERROR")</script>
-		<?php
+		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
 }
-?>

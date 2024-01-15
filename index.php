@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="info">
 			<h1>Wiki</h1>
-			<p><a href="/pages/addArticles.php">Create a your Article</a></p>
+			<p><a href="/pages/addArticlesPage.php">Create a your Article</a></p>
 			<p>OR</p>
 			<?php require $_SERVER["DOCUMENT_ROOT"] . "/module/find.php"; ?>
 		</div>

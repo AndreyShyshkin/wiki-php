@@ -6,7 +6,7 @@
 
 <body>
 	<div class="container">
-		<p><a href="/">Home</a></p>
+		<?php require $_SERVER["DOCUMENT_ROOT"] . "/module/header.php"; ?>
 		<form enctype="multipart/form-data" action="#" method="POST" id="addArticle">
 			<div>
 				<label for="title">Title</label>
@@ -31,7 +31,7 @@
 				</button>
 			</div>
 		</form>
-		<?php require $_SERVER["DOCUMENT_ROOT"] . "/module/submit.php"; ?>
+		<?php require $_SERVER["DOCUMENT_ROOT"] . "/module/addArticles.php"; ?>
 	</div>
 	<?php require $_SERVER["DOCUMENT_ROOT"] . "/module/scripts.php"; ?>
 </body>
